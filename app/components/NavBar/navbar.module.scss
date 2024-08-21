@@ -1,0 +1,63 @@
+@use "../../assets/mixins";
+@use "../../assets/variables";
+
+.container {
+  z-index: 9;
+  margin-top: 10px;
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 3px dashed #ff66c4;
+
+  .elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    padding: 10px;
+
+    .title {
+      @include mixins.title;
+    }
+
+    .menuMobile {
+      .modalMenu {
+        position: absolute;
+        top: 90px;
+        right: -20px;
+        background-color: #28282856;
+        border-radius: 10px 0 0 10px;
+        text-align: center;
+        backdrop-filter: blur(3px);
+        box-shadow: 0px 0px 5px variables.$main-pink;
+
+        .modalLinks {
+          @include mixins.menu;
+          padding-block: 10px;
+          padding-inline: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .menuDesktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .menuDesktop {
+    display: flex;
+    gap: 20px;
+
+    .menuVoice {
+      @include mixins.menu;
+    }
+  }
+  .menuMobile {
+    display: none;
+  }
+}

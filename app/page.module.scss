@@ -1,0 +1,46 @@
+.main {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/images/background.png");
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1; 
+  }
+
+  .container {
+    width: 90%;
+    height: 75vh;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    -ms-scroll-snap-destination: 0 0;
+    scroll-snap-destination: 0 0;
+    -ms-scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+
+    .content {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      height: 75vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

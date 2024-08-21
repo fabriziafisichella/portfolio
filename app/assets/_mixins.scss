@@ -1,0 +1,36 @@
+@use "./variables";
+
+@mixin title() {
+  font-family: variables.$font-title;
+  color: variables.$main-pink;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fff, 0 0 12px #f09, 0 0 22px #f09, 0 0 42px #f09;
+}
+
+@mixin menu() {
+  font-family: variables.$font-menu;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #fff;
+  transition: all 0.35s ease-in-out;
+  letter-spacing: 5px;
+  cursor: pointer;
+
+  &:hover {
+    color: variables.$main-pink;
+  }
+}
+
+@mixin sectionContent() {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 900px) {
+    width: 50%;
+    height: 100%;
+  }
+}
