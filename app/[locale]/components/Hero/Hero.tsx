@@ -1,10 +1,10 @@
 import style from "./hero.module.scss";
 import heroImage from "../../assets/images/hero.png";
 import { useContext } from "react";
-import { globalContext } from "@/app/(context)/globalcontext";
+import { globalContext } from "../../(context)/globalcontext";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { codeList } from "@/app/utils/codeList";
+import { codeList } from "../../utils/codeList";
 import { Title } from "../Title/Title";
 
 export function Hero() {

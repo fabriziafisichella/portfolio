@@ -1,10 +1,11 @@
 "use client";
 import style from "./navbar.module.scss";
 import { RefObject, useContext } from "react";
-import { globalContext } from "@/app/(context)/globalcontext";
+import { globalContext } from "../../(context)/globalcontext";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Divide as Hamburger } from "hamburger-react";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 type NavBarItem = {
   name: string;
@@ -88,13 +89,15 @@ export function NavBar() {
               key={index}
               onClick={(e) => {
                 e.preventDefault();
-                menu.ref?.current?.scrollIntoView({ behavior: "smooth" });
+                menu.ref?.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
               }}
             >
               {menu.name}
             </span>
           ))}
         </div>
+        
+        <LanguageSwitcher />
       </div>
     </div>
   );

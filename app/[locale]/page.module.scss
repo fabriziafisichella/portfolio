@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 
   &::before {
     content: "";
@@ -19,13 +20,14 @@
     background-size: cover;
     opacity: 0.3;
     z-index: -1; 
+    overflow: hidden;
   }
 
   .container {
     width: 90%;
     height: 75vh;
     flex-wrap: wrap;
-    overflow-x: scroll;
+    overflow-x: hidden;
     -ms-scroll-snap-destination: 0 0;
     scroll-snap-destination: 0 0;
     -ms-scroll-snap-type: y mandatory;

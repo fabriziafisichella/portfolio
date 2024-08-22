@@ -3,12 +3,12 @@
 
 .container {
   @include mixins.sectionDisposition;
+  justify-content: space-between;
 
   .image {
     @include mixins.sectionContent;
     display: flex;
     flex-direction: column;
-    overflow: visible;
 
     img {
       max-width: 90%;

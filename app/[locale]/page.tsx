@@ -8,6 +8,7 @@ import { Socials } from "./components/Socials/Socials";
 import { Contacts } from "./components/Contacts/Contacts";
 
 function Home() {
+  
 
   return (
 

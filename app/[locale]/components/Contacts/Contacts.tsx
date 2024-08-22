@@ -1,6 +1,6 @@
 import style from "./contacts.module.scss";
 import { useContext } from "react";
-import { globalContext } from "@/app/(context)/globalcontext";
+import { globalContext } from "../../(context)/globalcontext";
 
 export function Contacts() {
   const { contactsRef, isContactsInView } = useContext(globalContext);

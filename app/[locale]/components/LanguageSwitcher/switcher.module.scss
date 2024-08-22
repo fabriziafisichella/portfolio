@@ -1,0 +1,11 @@
+@use "../../assets/mixins";
+@use "../../assets/variables";
+
+.button {
+    border: 0;
+    background: none;
+    color: #fff;
+    font-family: variables.$font-title;
+    text-transform: uppercase;
+    font-size: 30px;
+}
