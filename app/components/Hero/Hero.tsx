@@ -1,23 +1,23 @@
 import style from "./hero.module.scss";
 import heroImage from "../../assets/images/hero.png";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useContext } from "react";
+import { globalContext } from "@/app/(context)/globalcontext";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { codeList } from "@/app/utils/codeList";
+import { Title } from "../Title/Title";
 
 export function Hero() {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+  const { homeRef, isHomeInView } = useContext<any>(globalContext);
 
   return (
-    <div className={style.container}>
+    <div className={style.container} ref={homeRef}>
       <motion.div
         className={style.image}
-        ref={ref}
         style={{
-          transform: isInView ? "none" : "translateY(-50px)",
-          opacity: isInView ? 1 : 0,
-          transition: isInView
+          transform: isHomeInView ? "none" : "translateY(-50px)",
+          opacity: isHomeInView ? 1 : 0,
+          transition: isHomeInView
             ? "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
             : "none",
         }}
@@ -31,33 +31,19 @@ export function Hero() {
       </motion.div>
 
       <div className={style.section}>
-        <motion.div
-          className={style.title}
-          ref={ref}
-          style={{
-            transform: isInView ? "none" : "translateY(-25px)",
-            opacity: isInView ? 1 : 0,
-            transition: isInView
-              ? "all 0.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s"
-              : "none",
-          }}
-        >
-          <span className={style.string}> </span>
-          Junior Front-End Developer
-        </motion.div>
+        <Title title="Junior Front-End Developer" view={isHomeInView} />
 
         <div className={style.codes}>
           {codeList.map((code, index) => (
             <motion.div
-              ref={ref}
               key={index}
               className={style.containerCode}
               initial={{ opacity: 0 }}
-              animate={{ opacity: isInView ? 1 : 0 }}
+              animate={{ opacity: isHomeInView ? 1 : 0 }}
               exit={{ opacity: 0 }}
               transition={{
-                duration: isInView ? 0.3 : 0,
-                delay: isInView ? index * 0.3 + 1 : 0,
+                duration: isHomeInView ? 0.3 : 0,
+                delay: isHomeInView ? index * 0.3 + 1 : 0,
               }}
             >
               <div

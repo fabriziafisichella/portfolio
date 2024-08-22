@@ -1,0 +1,33 @@
+@use "../../assets/mixins";
+@use "../../assets/variables";
+
+.title {
+  width: 100%;
+  @include mixins.menu;
+  letter-spacing: 0px;
+  font-size: 35px;
+
+  .string {
+    display: inline-block;
+    height: 10px;
+    border-radius: 20px;
+    background-color: variables.$main-fuchsia;
+    width: 50px;
+    margin-right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .title {
+    font-size: 60px;
+    .string {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+}
