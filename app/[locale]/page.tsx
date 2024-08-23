@@ -4,7 +4,7 @@ import styles from "./page.module.scss";
 import { Hero } from "./components/Hero/Hero";
 import { About } from "./components/About/About";
 import { Portfolio } from "./components/Portfolio/Portfolio";
-import { Socials } from "./components/Socials/Socials";
+import { Experience } from "./components/Experience/Experience";
 import { Contacts } from "./components/Contacts/Contacts";
 
 function Home() {
@@ -24,7 +24,7 @@ function Home() {
               <Portfolio />
             </section>
             <section className={styles.content}>
-              <Socials />
+              <Experience />
             </section>
             <section className={styles.content}>
               <Contacts />

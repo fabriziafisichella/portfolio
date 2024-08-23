@@ -22,6 +22,8 @@
     }
 
     .menuMobile {
+      display: flex;
+
       .modalMenu {
         position: absolute;
         top: 90px;
@@ -49,15 +51,16 @@
 }
 
 @media screen and (min-width: 900px) {
+  .menuMobile {
+    display: none !important;
+  }
   .menuDesktop {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 15px;
 
     .menuVoice {
       @include mixins.menu;
     }
-  }
-  .menuMobile {
-    display: none;
   }
 }

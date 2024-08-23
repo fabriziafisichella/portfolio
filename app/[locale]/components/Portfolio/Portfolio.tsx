@@ -7,9 +7,7 @@ export function Portfolio() {
 
   return (
     <div ref={portfolioRef}>
-      Hello, I'm the Portfolio component! <br />
-      Here you will find the showcase of <br />
-      my projects and creations.
+      Portfolio • Section in progress
     </div>
   );
 }

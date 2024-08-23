@@ -6,12 +6,12 @@ const initialContext = {
   homeRef: { current: null },
   aboutRef: { current: null },
   portfolioRef: { current: null },
-  socialsRef: { current: null },
+  experienceRef: { current: null },
   contactsRef: { current: null },
   isHomeInView: false,
   isAboutInView: false,
   isPortfolioInView: false,
-  isSocialsInView: false,
+  isExperienceInView: false,
   isContactsInView: false,
 };
 
@@ -21,25 +21,25 @@ const Context = ({ children }: { children: any }) => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const portfolioRef = useRef(null);
-  const socialsRef = useRef(null);
+  const experienceRef = useRef(null);
   const contactsRef = useRef(null);
 
   const isHomeInView = useInView(homeRef);
   const isAboutInView = useInView(aboutRef);
   const isPortfolioInView = useInView(portfolioRef);
-  const isSocialsInView = useInView(socialsRef);
+  const isExperienceInView = useInView(experienceRef);
   const isContactsInView = useInView(contactsRef);
 
   const value = {
     homeRef,
     aboutRef,
     portfolioRef,
-    socialsRef,
+    experienceRef,
     contactsRef,
     isHomeInView,
     isAboutInView,
     isPortfolioInView,
-    isSocialsInView,
+    isExperienceInView,
     isContactsInView,
   };
 

@@ -10,33 +10,49 @@ import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 type NavBarItem = {
   name: string;
   ref: RefObject<HTMLElement>;
+  condition: boolean;
 };
 
 export function NavBar() {
   const [activeMenu, setActiveMenu] = useState<boolean>(false);
-  const { homeRef, aboutRef, portfolioRef, socialsRef, contactsRef } =
-    useContext(globalContext);
+  const {
+    homeRef,
+    aboutRef,
+    portfolioRef,
+    experienceRef,
+    contactsRef,
+    isHomeInView,
+    isAboutInView,
+    isExperienceInView,
+    isContactsInView,
+    isPortfolioInView,
+  } = useContext(globalContext);
 
   const navbarList: NavBarItem[] = [
     {
       name: "Home",
       ref: homeRef,
+      condition: isHomeInView,
     },
     {
       name: "About Me",
       ref: aboutRef,
+      condition: isAboutInView,
     },
     {
       name: "Portfolio",
       ref: portfolioRef,
+      condition: isPortfolioInView,
     },
     {
-      name: "Socials",
-      ref: socialsRef,
+      name: "Experience",
+      ref: experienceRef,
+      condition: isExperienceInView,
     },
     {
       name: "Contacts",
       ref: contactsRef,
+      condition: isContactsInView,
     },
   ];
 
@@ -46,6 +62,7 @@ export function NavBar() {
         <div className={style.title}>Fabrizia Fisichella</div>
 
         <div className={style.menuMobile}>
+          <LanguageSwitcher />
           <Hamburger toggled={activeMenu} toggle={setActiveMenu} />
 
           <AnimatePresence>
@@ -66,6 +83,7 @@ export function NavBar() {
                   <motion.div
                     key={index}
                     className={style.modalLinks}
+                    style={{ color: menu.condition ? "#ff96d5" : "#fff" }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.3 }}
@@ -87,17 +105,20 @@ export function NavBar() {
             <span
               className={style.menuVoice}
               key={index}
+              style={{ color: menu.condition ? "#ff96d5" : "#fff" }}
               onClick={(e) => {
                 e.preventDefault();
-                menu.ref?.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                menu.ref?.current?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                });
               }}
             >
               {menu.name}
             </span>
           ))}
+          <LanguageSwitcher />
         </div>
-        
-        <LanguageSwitcher />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 import style from "./switcher.module.scss";
 import { useRouter, usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
+import { useState, useEffect } from "react";
 
 const LanguageSwitcher: React.FC = () => {
   const router = useRouter();
@@ -10,13 +11,18 @@ const LanguageSwitcher: React.FC = () => {
 
   const changeLanguage = (newLocale: string) => {
     const newPathname = `/${newLocale}${pathname.substring(3)}`;
-    router.push(newPathname);
+
+    // Use router.replace to change the URL without refreshing the page
+    router.push(newPathname, { scroll: false });
   };
 
   return (
     <button
       className={style.button}
-      onClick={() => changeLanguage(locale === "it" ? "en" : "it")}
+      onClick={(e) => {
+        e.preventDefault;
+        changeLanguage(locale === "it" ? "en" : "it");
+      }}
     >
       {locale === "it" ? "Italiano" : "English"}
     </button>
