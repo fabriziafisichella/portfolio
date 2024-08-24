@@ -85,7 +85,7 @@ export const portfolioListIT = [
   {
     id: 1,
     name: "Lorem Site",
-    date: "Mar 28th, 2024",
+    date: "28 Marzo, 2024",
     tools: "HTML, CSS",
     image: loremsite,
     repository: "https://github.com/fabriziafisichella/ipsum-lorem-site",
@@ -95,7 +95,7 @@ export const portfolioListIT = [
   {
     id: 2,
     name: "GameScapes",
-    date: "May 18th, 2024",
+    date: "18 Maggio, 2024",
     tools: "HTML, CSS, JS",
     image: gamescapes,
     repository: "https://github.com/fabriziafisichella/gamescapes",
@@ -105,7 +105,7 @@ export const portfolioListIT = [
   {
     id: 3,
     name: "LogoFlix",
-    date: "Jun 9th, 2024",
+    date: "9 Giugno, 2024",
     tools: "REACT, SASS, VITE",
     image: logoflix,
     repository: "https://github.com/fabriziafisichella/logoflix",
@@ -115,7 +115,7 @@ export const portfolioListIT = [
   {
     id: 4,
     name: "PhotoGram",
-    date: "Jun 23th, 2024",
+    date: "23 Giugno, 2024",
     tools: "REACT, NEXT.JS, SASS",
     image: photogram,
     repository: "https://github.com/fabriziafisichella/photogram",
@@ -125,7 +125,7 @@ export const portfolioListIT = [
   {
     id: 5,
     name: "Plot Builder",
-    date: "Jul 11th, 2024",
+    date: "11 Luglio, 2024",
     tools: "NEXT.JS, TYPESCRIPT, GEMINI AI",
     image: plotbuilder,
     repository: "https://github.com/fabriziafisichella/plot-builder",
@@ -136,7 +136,7 @@ export const portfolioListIT = [
   {
     id: 6,
     name: "SHOPPAmee",
-    date: "Aug 1st, 2024",
+    date: "1 Agosto, 2024",
     tools: "REACT, NEXT.JS, SASS, MONGODB",
     image: shoppamee,
     repository: "https://github.com/fabriziafisichella/shoppamee",
@@ -147,7 +147,7 @@ export const portfolioListIT = [
   {
     id: 7,
     name: "Take My Card, Please!",
-    date: "Aug 4th, 2024",
+    date: "4 Agosto, 2024",
     tools: "REACT, NEXT.JS, SASS",
     image: takemycard,
     repository: "https://github.com/fabriziafisichella/take-my-card-please",
