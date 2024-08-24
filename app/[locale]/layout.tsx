@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Fabrizia Fisichella • Portfolio",
-  description: "Fabrizia Fisichella's professional porftolio",
+  description: "Fabrizia Fisichella's professional portfolio",
 };
 
 export default async function RootLayout({
