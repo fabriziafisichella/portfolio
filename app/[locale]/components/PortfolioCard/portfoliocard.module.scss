@@ -2,15 +2,7 @@
 @use "../../assets/variables";
 
 .container {
-  border: 2px dotted variables.$main-fuchsia;
-  height: 400px;
-  width: 320px;
-  border-radius: 30px;
-  padding: 1em;
-  background: #28282850;
-  backdrop-filter: blur(3px);
-  overflow: hidden;
-  text-align: center;
+  @include mixins.card;
 
   img {
     width: 250px;
@@ -29,7 +21,6 @@
   .positionAndDate {
     margin-block: 10px;
   }
-
 
   .links {
     margin-block: 15px;
@@ -51,4 +42,5 @@
     margin-block: 20px;
     color: variables.$main-fuchsia;
   }
+
 }

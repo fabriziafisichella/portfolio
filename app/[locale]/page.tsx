@@ -8,7 +8,6 @@ import { Experience } from "./components/Experience/Experience";
 import { Contacts } from "./components/Contacts/Contacts";
 
 function Home() {
-  
 
   return (
 

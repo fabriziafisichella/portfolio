@@ -2,15 +2,7 @@
 @use "../../assets/variables";
 
 .container {
-  border: 2px dotted variables.$main-fuchsia;
-  height: 400px;
-  width: 320px;
-  border-radius: 30px;
-  padding: 1em;
-  background: #28282850;
-  backdrop-filter: blur(3px);
-  overflow: hidden;
-  text-align: center;
+  @include mixins.card;
 
   .company {
     @include mixins.menu;
@@ -45,4 +37,5 @@
     margin-block: 20px;
     color: variables.$main-fuchsia;
   }
+
 }
