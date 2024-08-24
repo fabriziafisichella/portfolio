@@ -5,10 +5,13 @@
     "motto_author": "Thomas Edison",
     "description": "I am a Junior Software Developer who loves discovering new methods to solve problems. The best way to learn for me is through practice, and my forte is to look for the easiest and most effective path to achieve a goal.\nI am a creative person who likes to experiment all the time, I am curious and I don't like to stay still. \nIf I have nothing to do, I'd rather make it up myself!"
   },
+  "Experiences": {
+    "title": "Experiences"
+  },
   "Contacts": {
     "title": "Contacts",
     "city": "Palermo, Italy (90146) • GMT +2 | UTC +1",
-    "availability": "Call between 10am - 1pm or 5pm - 8pm. \n Better to set an appointment via email first.",
+    "availability": "Call between 10am - 1pm or 5pm - 8pm. \nBetter to set an appointment via email first.",
     "name": "Name",
     "message": "Message",
     "send": "Send"

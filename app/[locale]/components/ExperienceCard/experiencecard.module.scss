@@ -1,0 +1,48 @@
+@use "../../assets/mixins";
+@use "../../assets/variables";
+
+.container {
+  border: 2px dotted variables.$main-fuchsia;
+  height: 400px;
+  width: 320px;
+  border-radius: 30px;
+  padding: 1em;
+  background: #28282850;
+  backdrop-filter: blur(3px);
+  overflow: hidden;
+  text-align: center;
+
+  .company {
+    @include mixins.menu;
+    cursor: text;
+    background-color: #1a1919;
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  .positionAndDate {
+    margin-block: 10px;
+  }
+
+
+  .links {
+    margin-block: 15px;
+    font-weight: bold;
+
+    a {
+      color: variables.$main-pink;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.35s all ease;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .tools {
+    margin-block: 20px;
+    color: variables.$main-fuchsia;
+  }
+}

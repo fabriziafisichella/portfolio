@@ -2,7 +2,6 @@
 import style from "./switcher.module.scss";
 import { useRouter, usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
-import { useState, useEffect } from "react";
 
 const LanguageSwitcher: React.FC = () => {
   const router = useRouter();

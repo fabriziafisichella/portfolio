@@ -5,7 +5,8 @@ export function Footer() {
   return (
     <div className={style.container}>
       <div className={style.elements}>
-        • Copyright © 2024 | Fabrizia Fisichella, All Rights Reserved •
+        • Copyright © 2024 | Fabrizia Fisichella •<br />
+        • All Rights Reserved •
       </div>
     </div>
   );

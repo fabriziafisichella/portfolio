@@ -1,0 +1,67 @@
+@use "../../assets/mixins";
+@use "../../assets/variables";
+
+.carouselContainer {
+  margin-top: 1em;
+  position: relative;
+  display: flex;
+  width: 320px;
+  height: 400px;
+
+  .carouselArrowsWrapper {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    align-items: center;
+
+    .carouselArrow {
+      font-size: 2.5rem;
+      pointer-events: all;
+      color: #fff;
+      filter: drop-shadow(0 0 5px #00000091);
+      cursor: pointer;
+      transition: 0.35s all;
+
+      &:hover {
+        color: variables.$main-pink;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1099px) {
+  .carouselContainer {
+    width: 650px;
+
+    .container {
+      gap: 10px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1100px) {
+  .carouselContainer {
+    width: 980px;
+
+    .container {
+      gap: 10px;
+    }
+  }
+}

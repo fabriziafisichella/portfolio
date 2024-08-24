@@ -89,7 +89,10 @@ export function NavBar() {
                     transition={{ duration: 0.3, delay: index * 0.3 }}
                     onClick={(e) => {
                       e.preventDefault();
-                      menu.ref?.current?.scrollIntoView({ behavior: "smooth" });
+                      menu.ref?.current?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                      });
                     }}
                   >
                     {menu.name}

@@ -1,0 +1,11 @@
+@use "../../assets/mixins";
+@use "../../assets/variables";
+
+.container {
+  @include mixins.sectionDisposition;
+
+  @media screen and (min-width: 900px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
